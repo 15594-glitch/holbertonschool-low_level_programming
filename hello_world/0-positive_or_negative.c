@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
-	/**
-	* main entry - point of the program, checks if number is positive or negative
-	*Return: Always 0 (success)
-	*/
+/**
+* main entry - point of the program, checks if number is positive or negative
+*Return: Always 0 (success)
+*/
 int main(void)
 {
 	int n;
