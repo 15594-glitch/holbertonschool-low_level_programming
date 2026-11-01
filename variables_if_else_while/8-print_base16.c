@@ -11,7 +11,7 @@ int main(void)
 
 	int numbers;
 
-	for (numbers = 49 ; numbers <= 54; numbers++)
+	for (numbers = 49 ; numbers <= 66; numbers++)
 	{
 	putchar(numbers);
 	}
