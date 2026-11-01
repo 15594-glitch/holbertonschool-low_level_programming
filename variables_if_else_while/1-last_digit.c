@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 /**
  * main - Entry This program will assign a random number to the variable n
  * Print the last digit of the number stored in the variable n
@@ -13,7 +12,9 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	int last_digit = n % 10;
+	int last_digit;
+
+	last_digit = n % 10;
 
 	if (last_digit > 5)
 	{
@@ -21,12 +22,13 @@ int main(void)
 	}
 	else if (last_digit == 0)
 	{
-	printf("Last digit of %d is %d\n", n, last_digit);
+	printf("Last digit of %d is %d and is 0\n", n, last_digit);
 	}
-	else if (last_digit < 6 && last_digit != 0)
+	else
 	{
-	printf("Last digit of %d is %d and is less than 6 and not 0\n"
-		, n, last_digit);
+	printf("Last digit of %d is %d and is less than 6 and not 0\n",
+	 n, last_digit);
 	}
+
 	return (0);
 }
