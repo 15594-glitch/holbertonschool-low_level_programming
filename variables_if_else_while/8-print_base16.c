@@ -9,13 +9,15 @@
 int main(void)
 {
 
-        int numbers = 49;
+	int numbers = 49;
+
 	int multiplicateur = 50;
-        for (numbers = 49, numbers <= 54, numbers *= multiplicateur)
+
+	for (numbers = 49, numbers <= 54, numbers *= multiplicateur)
 	{
 	putchar(numbers);
 	}
 	putchar('\n');
 
-        return (0);
+	return (0);
 }
