@@ -13,7 +13,7 @@ int main(void)
 
 	int multiplicateur = 50;
 
-	for (numbers = 49, numbers <= 54, numbers *= multiplicateur)
+	for (numbers = 49; numbers <= 54; numbers *= multiplicateur)
 	{
 	putchar(numbers);
 	}
