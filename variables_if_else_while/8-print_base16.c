@@ -9,11 +9,9 @@
 int main(void)
 {
 
-	int numbers = 49;
+	int numbers;
 
-	int multiplicateur = 50;
-
-	for (numbers = 49; numbers <= 54; numbers *= multiplicateur)
+	for (numbers = 49 ; numbers <= 54; numbers++)
 	{
 	putchar(numbers);
 	}
