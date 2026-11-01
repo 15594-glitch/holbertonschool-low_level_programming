@@ -13,7 +13,7 @@ int main(void)
 
 	while (lowercase <= 'z')
 	{
-	if (lowercase != 'q' && lowercase != 'u')
+	if (lowercase != 'q' && lowercase != 'e')
 		{
 		putchar(lowercase);
 		}
