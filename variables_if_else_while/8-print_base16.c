@@ -9,9 +9,13 @@
 int main(void)
 {
 
-        char lowercase = 'a';
-
-        while (lowercase <= 'z'){ }putchar('\n');
+        int numbers = 49;
+	int multiplicateur = 50;
+        for (numbers = 49, numbers <= 54, numbers *= multiplicateur)
+	{
+	putchar(numbers);
+	}
+	putchar('\n');
 
         return (0);
 }
