@@ -21,7 +21,7 @@ static void build_dataset(void)
 
     for (i = 0; i < DATASET_SIZE; i++)
         dataset[i] = (int)(next_value(&state) % 100000);
-}
+} 
 
 static void process_dataset(void)
 {
@@ -45,7 +45,7 @@ static unsigned long reduce_checksum(void)
 
     sum = 0;
     for (i = 0; i < DATASET_SIZE; i++)
-        sum = (sum * 131ul) + (unsigned long)dataset[i];
+	sum = (sum * 131ul) + (unsigned long)dataset[i];
 
     return sum;
 }
@@ -54,11 +54,17 @@ int main(void)
 {
     unsigned long checksum;
 
-    /* Students must add clock-based timing and print required lines. */
-
-    build_dataset();
-    process_dataset();
-    checksum = reduce_checksum();
+	clock_t start, end;
+	clock_t start_phase, end_phase;
+	start = clock () 
+	start_phase = clock ();
+	build_dataset();
+	end_phase = clock();
+	start_phase = clock ();
+	process_dataset();
+	end_phase = clock ();
+	start_phase = clock ();
+	checksum = reduce_checksum();
 
     if (checksum == 0ul)
         printf("impossible\n");
