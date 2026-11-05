@@ -55,26 +55,36 @@ int main(void)
     unsigned long checksum;
 
 	clock_t start, end;
-	clock_t start_phase, end_phase;
-	start = clock () 
-	start_phase = clock ();
+	clock_t start_phase1, end_phase1;
+	clock_t start_phase2, end_phase2;
+	clock_t start_phase3, end_phase3;
+	double total, total_phase1, total_phase2, total_phase3;
+
+	start = clock();
+	start_phase1 = clock();
 	build_dataset();
-	end_phase = clock();
-	start_phase = clock ();
+	end_phase1 = clock();
+	start_phase2 = clock();
 	process_dataset();
-	end_phase = clock ();
-	start_phase = clock ();
+	end_phase2 = clock();
+	start_phase3 = clock();
 	checksum = reduce_checksum();
+	end_phase3 = clock();
+	end = clock();
+
+	total = (double)(end - start) / CLOCKS_PER_SEC;
+	total_phase1 = (double)(end_phase1 - start_phase1) / CLOCKS_PER_SEC;
+	total_phase2 = (double)(end_phase2 - start_phase2) / CLOCKS_PER_SEC;
+	total_phase3 = (double)(end_phase3 - start_phase3) / CLOCKS_PER_SEC;
 
     if (checksum == 0ul)
+	{
         printf("impossible\n");
-
-    /* Required output (exact format, no extra lines):
-     * TOTAL seconds: <float>
-     * BUILD_DATA seconds: <float>
-     * PROCESS seconds: <float>
-     * REDUCE seconds: <float>
-     */
+	printf("TOTAL seconds: %.6f\n", total);
+	printf("BUILD_DATA seconds: %.6f\n", total_phase1);
+	printf("PROCESS seconds: %.6f\n", total_phase2);
+	printf("REDUCE seconds: %.6f\n", total_phase3);
+	}
 
     return 0;
 }
