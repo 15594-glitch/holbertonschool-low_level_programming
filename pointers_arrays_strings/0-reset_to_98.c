@@ -1,13 +1,18 @@
-#include <unistd.h>
+#include "main.h"
+#include <stdio.h>
 
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
+/*** reset_to_98 - updates the value a pointer points to to 98 
+*
+* Return: void.
+*/
+void reset_to_98(int *n)
 {
-	return (write(1, &c, 1));
+
+	int n ;
+	int *p;
+	n = 402 ;
+	p = &n;
+	*p = 98;
+
 }
+
