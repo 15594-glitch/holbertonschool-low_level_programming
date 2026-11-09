@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-* puts2 - Affiche un caractère sur deux.
+* puts2 - affiche un caractère sur deux.
 * @str: Le tableau.
 *
-* Return: Rien.
+* Return: 0
 */
 void puts2(char *str)
 {
