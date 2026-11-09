@@ -1,18 +1,19 @@
 #include "main.h"
 
 /**
-* puts2 - affiche un caractère sur deux.
-* @str: Le tableau de caractère
-*
-* Return: 0
-*/
+ * puts2 - prints every other character of a string
+ * @str: the string to treat
+ *
+ * Return: void
+ */
 void puts2(char *str)
 {
 	int b = 0;
+
 	while (str[b] != '\0')
 	{
-	_putchar(str[b]);
-	b += 2;
-	}_
-	putchar('\n');
+		_putchar(str[b]);
+		b += 2;
+	}
+	_putchar('\n');
 }
