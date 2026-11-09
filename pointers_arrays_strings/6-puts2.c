@@ -2,18 +2,18 @@
 
 /**
 * puts2 - Affiche un caractère sur deux.
-* @str: La chaîne.
+* @str: Le tableau.
 *
 * Return: Rien.
 */
-void puts2(char *str);
+void puts2(char *str)
 {
 	int b = 0;
 
 	while (str[b] != '\0')
 	{
 		_putchar(str[b]);
-		(b += 2);
+		b += 2;
 	}
 	_putchar('\n');
 }
