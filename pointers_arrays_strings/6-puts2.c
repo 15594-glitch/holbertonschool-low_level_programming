@@ -2,7 +2,7 @@
 
 /**
 * puts2 - affiche un caractère sur deux.
-* @str: Le tableau.
+* @str: Le tableau de caractère
 *
 * Return: 0
 */
@@ -12,8 +12,8 @@ void puts2(char *str)
 
 	while (str[b] != '\0')
 	{
-		_putchar(str[b]);
-		b += 2;
+	_putchar(str[b]);
+	b += 2;
 	}
 	_putchar('\n');
 }
