@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* puts2 - prints every other character of a string
+* puts2 - affiche un caractère sur 2
 * @str: the string to treat
 *
 * Return: 0
@@ -14,7 +14,8 @@ void puts2(char *str)
 
 	while (str[b] != '\0')
 	{
-	_putchar(str[b]);b += 2;
+		_putchar(str[b]);
+		b += 2;
 	}
 	_putchar('\n');
 }
