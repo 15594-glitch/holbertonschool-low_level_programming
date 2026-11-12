@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
-* create_array - crée un tableau de caractères avec un caractère spécifique
+* create_array - crée un tableau avec un caractère spécifique
 * @size : la taille du tableau à créer
 * @c : le caractère avec lequel initialiser le tableau
 *
-* Retour : un pointeur vers le tableau, ou NULL en cas d'échec ou si size = 0
+* Return: array
 */
 char *create_array(unsigned int size, char c)
 {
@@ -26,7 +26,6 @@ char *create_array(unsigned int size, char c)
 		*(array + i) = c;
 		i++;
 	}
-
 	return (array);
 }
 
