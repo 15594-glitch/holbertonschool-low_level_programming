@@ -1,13 +1,12 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
 * *_strdup - returns a pointer to newly malloc, which contains str.
-*
-* Return:  P
+* @str : it's the source string
+* Return: P
 */
- char *_strdup(char *str)
+char *_strdup(char *str)
 {
 	int n;
 	char *p;
@@ -17,7 +16,7 @@
 	i = 0;
 
 	if (str == NULL)
-                return (NULL);
+		return (NULL);
 
 	m = str;
 
@@ -30,7 +29,7 @@
 	p = malloc(sizeof(*p) * i + 1);
 
 	if (p == NULL)
-                return (NULL);
+		return (NULL);
 
 	for (n = 0; n <= i ; n++)
 	{
