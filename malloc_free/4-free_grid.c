@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
-* alloc_grid - returns a pointer to a 2 dimensional array of integers
-* @width: width of the grid
-* @height: height of the grid
+* free_grid - libère une grille 2D
+* @grid: le tableau à libérer
+* @height: le nombre de lignes
 *
-* Return: grid.
+* Return: void
 */
 void free_grid(int **grid, int height);
 {
@@ -21,4 +21,3 @@ void free_grid(int **grid, int height);
 	}
 	free(grid);
 }
-
