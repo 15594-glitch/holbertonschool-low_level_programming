@@ -3,10 +3,12 @@
 
 /**
  * init_dog - initialise un struct dog
- * @d: pointeur vers struct dog
+ * @d: pointeur vers la structure
  * @name: nom
- * @age: age
- * @owner: proprietaire
+ * @age: âge
+ * @owner: propriétaire
+ *
+ * Return: Rien.
  */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 {
@@ -15,10 +17,6 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
 		d->name = name;
 		d->age = age;
 		d->owner = owner;
-	}
-	else
-	}
-		return;
 	}
 }
 
