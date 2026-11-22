@@ -1,15 +1,17 @@
 #include "function_pointers.h"
 
 /**
- * array_iterator - itère à travers un tableau et applique une fonction à chaque élément
- * @array: tableau à itérer
+ * array_iterator - exécute une action sur chaque élément
+ * @array: tableau d'entiers
  * @size: taille du tableau
- * @action: pointeur vers la fonction d'action
+ * @action: fonction à appliquer
  *
- * Return: Rien.
+ * Return: Rien
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
+	size_t i;
+
 	if (array == NULL || action == NULL)
 		return;
 
